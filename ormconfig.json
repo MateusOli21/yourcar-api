@@ -5,7 +5,8 @@
   "username": "postgres",
   "password": "docker",
   "database": "yourcar_db",
-  "entities": ["./src/models/*.ts"],
+  "synchronize": "true",
+  "entities": ["./dist/modules/**/entities/*.entity.js"],
   "migrations": ["./src/database/migrations/*.ts"],
   "cli": {
     "migrationsDir": "./src/database/migrations"
