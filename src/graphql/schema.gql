@@ -16,3 +16,18 @@ type Car {
 type Query {
   cars: [Car!]!
 }
+
+type Mutation {
+  addCar(newCarData: INewCarData!): Car!
+  deleteCar(carId: String!): String!
+}
+
+input INewCarData {
+  name: String!
+  dailyPrice: String!
+  monthlyPrice: String!
+  mileage: String!
+  gas: String!
+  gearType: String!
+  thumbnailUrl: String!
+}
